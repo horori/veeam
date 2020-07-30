@@ -71,7 +71,11 @@ module Veeam
         'package_url' => 'https://download2.veeam.com/VeeamBackup&Replication_9.5.4.2615.Update4.iso',
         'package_checksum' => 'ecc27bbcf49104861566782701dca42375b324b4710e2fa79b5f8068c31c4494'
       }
-      end
+      when '9.5.4.2866' then {
+        'package_url' => 'https://download2.veeam.com/VeeamBackup&Replication_9.5.4.2866.Update4b_20191210.iso',
+        'package_checksum' => 'cfc41596154563f60b74320634589721fd1110c87e04632068bc5234aada342e'
+      }
+    end
     end
 
     def find_update_url(version)
@@ -115,6 +119,10 @@ module Veeam
       when '9.5.4.2615' then {
         'package_url' => 'https://download2.veeam.com/VeeamBackup&Replication_9.5.4.2615.Update4.iso',
         'package_checksum' => 'ecc27bbcf49104861566782701dca42375b324b4710e2fa79b5f8068c31c4494'
+      }
+      when '9.5.4.2866' then {
+        'package_url' => 'https://download2.veeam.com/VeeamBackup&Replication_9.5.4.2866.Update4b_20191210.iso',
+        'package_checksum' => 'cfc41596154563f60b74320634589721fd1110c87e04632068bc5234aada342e'
       }
       end
     end
@@ -165,19 +173,26 @@ module Veeam
         'SharePoint' => { name: 'Veeam Explorer for Microsoft SharePoint', version: '9.5.0.836' },
         'Oracle' => { name: 'Veeam Explorer for Oracle', version: '9.5.0.836' }
       }
-      when /9.5.4.\d+/ then {
-        'ActiveDirectory' => { name: 'Veeam Explorer for Microsoft Active Directory', version: '9.6.4.1053' },
-        'SQL' => { name: 'Veeam Explorer for Microsoft SQL Server', version: '9.6.4.1053' },
-        'Exchange' => { name: 'Veeam Explorer for Microsoft Exchange', version: '9.6.4.1053' },
-        'SharePoint' => { name: 'Veeam Explorer for Microsoft SharePoint', version: '9.6.4.1053' },
-        'Oracle' => { name: 'Veeam Explorer for Oracle', version: '9.6.4.1053' }
-      }
       when /9.5.0.\d+/ then {
         'ActiveDirectory' => { name: 'Veeam Explorer for Microsoft Active Directory', version: '9.5.0.836' },
         'SQL' => { name: 'Veeam Explorer for Microsoft SQL Server', version: '9.5.0.836' },
         'Exchange' => { name: 'Veeam Explorer for Microsoft Exchange', version: '9.5.0.836' },
         'SharePoint' => { name: 'Veeam Explorer for Microsoft SharePoint', version: '9.5.0.836' },
         'Oracle' => { name: 'Veeam Explorer for Oracle', version: '9.5.0.836' }
+      }
+      when '9.5.4.2615' then {
+        'ActiveDirectory' => { name: 'Veeam Explorer for Microsoft Active Directory', version: '9.6.4.1053' },
+        'SQL' => { name: 'Veeam Explorer for Microsoft SQL Server', version: '9.6.4.1053' },
+        'Exchange' => { name: 'Veeam Explorer for Microsoft Exchange', version: '9.6.4.1053' },
+        'SharePoint' => { name: 'Veeam Explorer for Microsoft SharePoint', version: '9.6.4.1053' },
+        'Oracle' => { name: 'Veeam Explorer for Oracle', version: '9.6.4.1053' }
+      }
+      when '9.5.4.2866' then {
+        'ActiveDirectory' => { name: 'Veeam Explorer for Microsoft Active Directory', version: '9.6.4.1092' },
+        'SQL' => { name: 'Veeam Explorer for Microsoft SQL Server', version: '9.6.4.1092' },
+        'Exchange' => { name: 'Veeam Explorer for Microsoft Exchange', version: '9.6.4.1092' },
+        'SharePoint' => { name: 'Veeam Explorer for Microsoft SharePoint', version: '9.6.4.1092' },
+        'Oracle' => { name: 'Veeam Explorer for Oracle', version: '9.6.4.1092' }
       }
       end
     end
