@@ -66,6 +66,7 @@ action :install do
     installed_version = installed_packages[package_name][:version]
     if installed_version == package_version
       installed_explorers.push(explorer)
+      Chef::Log.info("The package #{package_name} is already installed with version #{installed_version}. All is good!")
     else
       Chef::Log.info("The package #{package_name} is installed with version #{installed_version} but should be upgraded to #{package_version}")
     end
