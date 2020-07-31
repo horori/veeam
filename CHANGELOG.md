@@ -1,5 +1,10 @@
 # Change log information for Veeam Cookbook
 
+## Version 3.0.6
+2020-07-31
+
+Reboot loop bug fix for update 4b (9.5.4.2866) that has different desired version for vbr component.
+
 ## Version 3.0.3
 2020-07-30
 
